@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Why I Love You 💘</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+    <nav class="topbar">
+        <div class="logo">Why I Love You 💘</div>
+        <div class="heart-icon">❤️</div>
+        <!-- Floating hearts container -->
+        <div class="floating-hearts">
+            <span class="heart">💖</span>
+            <span class="heart">💘</span>
+            <span class="heart">❤️</span>
+        </div>
+    </nav>
+
+  <section class="page reason fade-in" id="reason1">
+  <div class="bg-images">
+    <img src="smile1.jpg" alt="" class="bg-img img1" />
+    <img src="smile2.png" alt="" class="bg-img img2" />
+    <img src="smile3.jpg" alt="" class="bg-img img3" />
+  </div>
+  <h2>1. You Are Really Smart 🧠</h2>
+  <p>Your are actually really smart. The fact that you have on the greatest avg of the all the freshman and the you place valecdictorian on your middle really impressed, I like this aspect of you not only because your grade smart, but you also have a sweet personality anybody can fall in love with. When you told me that you passed both regents, I didn't bear any thought, but know I realize how awesome you are. Back in middle school I had the highest regents scores, you having similar scores to me make feel at awe or sum idk 😛</p>
+</section>
+
+<section class="page reason fade-in" id="reason2">
+  <div class="bg-images">
+    <img src="support1.jpeg" alt="" class="bg-img img1" />
+    <img src="support2.jpeg" alt="" class="bg-img img2" />
+  </div>
+  <h2>2. You’re Play Volleyball</h2>
+  <p>Something that I didn't tell you it's that even though I didn't play much Volleyball with you, I admired you for being a good player (not ema though). Did you know that most my family played Volleyball at an actual athlete level. My sister was the captain at her school. My mother was also a captain as she played a lot of vb when she was young. They are on google you just gotta look for it. So if this works I will play more Volleyball with you. </p>
+</section>
+
+<section class="page reason fade-in" id="reason3">
+  <div class="bg-images">
+    <img src="love1.webp" alt="" class="bg-img img1" />
+    <img src="love2.webp" alt="" class="bg-img img2" />
+    <img src="love3.webp" alt="" class="bg-img img3" />
+    <img src="love4.webp" alt="" class="bg-img img4" />
+  </div>
+  <h2>3. You're Very Cute 💗</h2>
+  <p>Even thought I haven't said it to you, I find you very pretty. In my head I always compared to those white cats teddy that you just want to squish and play with. So yea I was daydreaming about you. However it's hard to daydream about you not being together anymore. One of the main reason I find you cute is because of your personality even though you act very rough that's what I like about you; I like that you care about the people around you, I like how you express your feelings freely and made the first move. I could say more things, that's for you to discover. </p>
+</section>
+
+
+  <script>
+    // Floating hearts animation
+    function createHeart() {
+      const heart = document.createElement('div');
+      heart.classList.add('heart');
+      heart.style.left = Math.random() * 100 + 'vw';
+      heart.style.fontSize = Math.random() * 20 + 20 + 'px';
+      heart.innerText = '❤️';
+      document.body.appendChild(heart);
+      setTimeout(() => heart.remove(), 6000);
+    }
+    setInterval(createHeart, 800);
+
+    // Scroll fade-in effect
+    function reveal() {
+      const fades = document.querySelectorAll('.fade-in');
+      const windowBottom = window.innerHeight;
+
+      fades.forEach(el => {
+        const elementTop = el.getBoundingClientRect().top;
+        if (elementTop < windowBottom - 100) {
+          el.classList.add('visible');
+        }
+      });
+    }
+
+    window.addEventListener('scroll', reveal);
+    window.addEventListener('load', reveal);
+  </script>
+  <audio id="bg-music" autoplay loop muted>
+  <source src="love-song.mp3" type="audio/mpeg" />
+  Your browser does not support the audio element.
+</audio>
+
+<script>
+  const music = document.getElementById('bg-music');
+
+  function playMusicOnClick() {
+    music.muted = false; // unmute
+    music.play();
+    document.removeEventListener('click', playMusicOnClick);
+  }
+
+  document.addEventListener('click', playMusicOnClick);
+</script>
+<p>I hope this work really  🙏🙏🙏🙏🙏🙏 you're not a waste of my time, the fact you switch the theme is crazy tho</p>
+</body>
+</html>
